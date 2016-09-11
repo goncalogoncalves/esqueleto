@@ -49,7 +49,6 @@ class ComposerStaticInitaf2718f6f59a7af48f7615727e4e423f
         'Devgo\\Captcha' => __DIR__ . '/..' . '/devgo/classes/captcha.class.php',
         'Devgo\\Database' => __DIR__ . '/..' . '/devgo/classes/database.class.php',
         'Devgo\\Email' => __DIR__ . '/..' . '/devgo/classes/email.class.php',
-        'Devgo\\Menu' => __DIR__ . '/..' . '/devgo/classes/menu.class.php',
         'Devgo\\Utils' => __DIR__ . '/..' . '/devgo/classes/utils.class.php',
     );
 
