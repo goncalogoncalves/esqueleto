@@ -1,6 +1,6 @@
 # Esqueleto - PHP MVC skeleton
 
-<img style="float: right;" src="resources/esqueleto_v2.png">
+<img style="float: right;" align="right" src="resources/esqueleto_v2.png">
 
 Esqueleto is a skeleton PHP MVC application.<br>
 It aims to be simple and fast with a good structure.<br>
