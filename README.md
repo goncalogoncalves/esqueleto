@@ -68,7 +68,7 @@ Import the db located at `data/db_esqueleto.zip`
 ## Usage
 
 + Edit configs in `config/development.php`
-+ Routes are defined in the db
++ Routes are defined in the db. You aldo need to update `public/index.php`
 + If you add a new controller, update the `public/index.php`
 
 ## Deployment
