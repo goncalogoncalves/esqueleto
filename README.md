@@ -107,3 +107,4 @@ This project is licensed under the Apache License - see the [LICENSE.md](LICENSE
 * Thank you to all the people that was involved in one way or another
 * Inspiration from [Slim framework](http://www.slimframework.com/) and [Mini](https://github.com/panique/mini)
 * If you find any bugs, please report them.
+* Logo image taken from [here](https://www.flickr.com/photos/cltn/12053995)
