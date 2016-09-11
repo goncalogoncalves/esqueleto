@@ -1,0 +1,28 @@
+{
+	"name": "Esqueleto",
+    "description": "PHP MVC skeleton",
+    "type": "website",
+    "version": "0.1",
+    "keywords": ["esqueleto","skeleton","php","mvc"],
+    "authors": [
+        {
+            "name": "Gonçalo Gonçalves",
+            "email": "devgoncalo@gmail.com",
+            "homepage": "http://goncalogoncalves.com"
+        }
+    ],
+    "_comment": [
+        "devgo",
+				"qwe"
+    ],
+    "require": {
+        "klein/klein": "^2.1",
+        "monolog/monolog": "~1.12"
+    },
+    "autoload": {
+        "psr-0": {
+            "esqueleto": "app/src/"
+        },
+        "classmap": [ "vendor/devgo" ]
+    }
+}

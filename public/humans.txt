@@ -1,0 +1,16 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Gonçalo Gonçalves -- web developer -- devgoncalo@gmail.com
+
+# THANKS
+
+    To all the things and everyone that made this possible
+
+# TECHNOLOGY COLOPHON
+
+    HTML5, CSS3
+    jQuery, Modernizr,
+    PHP, MySQL
