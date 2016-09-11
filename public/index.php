@@ -18,7 +18,7 @@ define('APP_MODE', 'development'); // [development,production]
 
 // require autoload
 require_once __DIR__.'/../vendor/autoload.php';
-echo __DIR__;
+
 // require config
 // routes also come from here
 require APP_PATH.'/app/config/'.APP_MODE.'.php';
