@@ -4,7 +4,7 @@
 
 Esqueleto is a skeleton PHP MVC application.<br>
 It aims to be simple and fast with a good structure.<br>
-Ideal to do rapid prototyping.
+Ideal for rapid prototyping.
 
 *This is a work in progress*
 
@@ -100,7 +100,7 @@ define('APP_MODE', 'development');
 
 ## License
 
-This project is licensed under the Apache License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the Apache License - see the [LICENSE](LICENSE) file for details
 
 ## Acknowledgments
 
