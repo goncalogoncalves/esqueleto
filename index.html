@@ -1,0 +1,182 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Esqueleto by goncalogoncalves</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
+    <meta name="viewport" content="width=device-width">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Esqueleto</h1>
+        <p>PHP MVC skeleton</p>
+
+        <p class="view"><a href="https://github.com/goncalogoncalves/esqueleto">View the Project on GitHub <small>goncalogoncalves/esqueleto</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/goncalogoncalves/esqueleto/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/goncalogoncalves/esqueleto/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/goncalogoncalves/esqueleto">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a id="esqueleto---php-mvc-skeleton" class="anchor" href="#esqueleto---php-mvc-skeleton" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Esqueleto - PHP MVC skeleton</h1>
+
+<p><img align="right" src="resources/esqueleto_v2.png"></p>
+
+<p>Esqueleto is a skeleton PHP MVC application.<br>
+It aims to be simple and fast with a good structure.<br>
+Ideal for rapid prototyping.</p>
+
+<p><em>This is a work in progress</em></p>
+
+<h2>
+<a id="getting-started" class="anchor" href="#getting-started" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Getting Started</h2>
+
+<p>These instructions will get you a copy of the project up and running on your local machine for development.</p>
+
+<h3>
+<a id="prerequisities" class="anchor" href="#prerequisities" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Prerequisities</h3>
+
+<ul>
+<li>Local server with PHP and MySQL</li>
+<li><a href="https://nodejs.org/en/">NodeJs</a></li>
+<li><a href="http://gruntjs.com/">GruntJs</a></li>
+<li><a href="https://getcomposer.org/">Composer</a></li>
+</ul>
+
+<h3>
+<a id="installing" class="anchor" href="#installing" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Installing</h3>
+
+<h4>
+<a id="windows-environment" class="anchor" href="#windows-environment" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Windows environment</h4>
+
+<p>Edit the file with admin priviledges  <code>C:\Windows\System32\drivers\etc\hosts</code><br>
+Add a new line with:</p>
+
+<pre><code>127.0.0.1  esqueleto.dev
+</code></pre>
+
+<p>On apache server, uncomment the line from the file <code>apache\apache2.4.18\conf\httpd.conf</code></p>
+
+<pre><code>Include conf/extra/httpd-vhosts.conf
+</code></pre>
+
+<p>On the httpd-vhosts file add</p>
+
+<pre><code>&lt;VirtualHost *:80&gt;
+    ServerName esqueleto.dev
+    DocumentRoot C:/wamp64/www/dev/esqueleto/public
+    &lt;Directory  "C:/wamp64/www/dev/esqueleto/public/"&gt;
+        Options Indexes FollowSymLinks MultiViews
+        AllowOverride All
+        Require local
+    &lt;/Directory&gt;
+&lt;/VirtualHost&gt;
+</code></pre>
+
+<p>Edit <code>DocumentRoot</code> and <code>Directory</code> accordingly (point to where you put the project inside the server)<br></p>
+
+<p>This means that, everytime <code>esqueleto.dev</code> is called in the browser, it will load the index file inside the <code>DocumentRoot</code> folder</p>
+
+<p>From the command prompt, navigate to the root of the project and execute:</p>
+
+<pre><code>npm install
+</code></pre>
+
+<pre><code>composer update
+</code></pre>
+
+<pre><code>grunt
+</code></pre>
+
+<p>Import the db located at <code>data/db_esqueleto.zip</code></p>
+
+<h2>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Usage</h2>
+
+<ul>
+<li>Edit configs in <code>config/development.php</code>
+</li>
+<li>Routes are defined in the db. You aldo need to update <code>public/index.php</code>
+</li>
+<li>If you add a new controller, update the <code>public/index.php</code>
+</li>
+</ul>
+
+<h2>
+<a id="deployment" class="anchor" href="#deployment" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Deployment</h2>
+
+<p>In the <code>config</code> folder there are two files, one for development and other for production. In <code>public/index.php</code> change the mode you want</p>
+
+<pre><code>define('APP_MODE', 'development');
+</code></pre>
+
+<h2>
+<a id="built-with" class="anchor" href="#built-with" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Built With</h2>
+
+<ul>
+<li><a href="https://github.com/klein/klein.php">klein router</a></li>
+<li><a href="https://github.com/Seldaek/monolog">Monolog</a></li>
+<li><a href="http://php.net/manual/en/book.pdo.php">PDO</a></li>
+</ul>
+
+<h2>
+<a id="contributing" class="anchor" href="#contributing" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Contributing</h2>
+
+<ol>
+<li>Fork it!</li>
+<li>Create your feature branch: <code>git checkout -b my-new-feature</code>
+</li>
+<li>Commit your changes: <code>git commit -am 'Add some feature'</code>
+</li>
+<li>Push to the branch: <code>git push origin my-new-feature</code>
+</li>
+<li>Submit a pull request :D<br>
+</li>
+</ol>
+
+<h2>
+<a id="authors" class="anchor" href="#authors" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Authors</h2>
+
+<ul>
+<li>
+<strong>Gonçalo Gonçalves</strong> - <em>Initial work</em> - <a href="http://goncalogoncalves.com/">http://goncalogoncalves.com/</a>
+</li>
+</ul>
+
+<h2>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>License</h2>
+
+<p>This project is licensed under the Apache License - see the <a href="LICENSE">LICENSE</a> file for details</p>
+
+<h2>
+<a id="acknowledgments" class="anchor" href="#acknowledgments" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Acknowledgments</h2>
+
+<ul>
+<li>Thank you to all the people that was involved in one way or another</li>
+<li>Inspiration from <a href="http://www.slimframework.com/">Slim framework</a> and <a href="https://github.com/panique/mini">Mini</a>
+</li>
+<li>If you find any bugs, please report them.</li>
+<li>Logo image taken from <a href="https://www.flickr.com/photos/cltn/12053995">here</a>
+</li>
+</ul>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/goncalogoncalves">goncalogoncalves</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
