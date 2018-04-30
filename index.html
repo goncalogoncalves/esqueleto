@@ -48,7 +48,7 @@ Ideal for rapid prototyping.</p>
 <ul>
 <li>Local server with PHP and MySQL</li>
 <li><a href="https://nodejs.org/en/">NodeJs</a></li>
-<li><a href="http://gruntjs.com/">GruntJs</a></li>
+<li><a href="http://gulpjs.com/">Gulp</a></li>
 <li><a href="https://getcomposer.org/">Composer</a></li>
 </ul>
 
@@ -61,7 +61,7 @@ Ideal for rapid prototyping.</p>
 <p>Edit the file with admin priviledges  <code>C:\Windows\System32\drivers\etc\hosts</code><br>
 Add a new line with:</p>
 
-<pre><code>127.0.0.1  esqueleto.dev
+<pre><code>127.0.0.1  esqueleto.localhost
 </code></pre>
 
 <p>On apache server, uncomment the line from the file <code>apache\apache2.4.18\conf\httpd.conf</code></p>
@@ -72,9 +72,9 @@ Add a new line with:</p>
 <p>On the httpd-vhosts file add</p>
 
 <pre><code>&lt;VirtualHost *:80&gt;
-    ServerName esqueleto.dev
-    DocumentRoot C:/wamp64/www/dev/esqueleto/public
-    &lt;Directory  "C:/wamp64/www/dev/esqueleto/public/"&gt;
+    ServerName esqueleto.localhost
+    DocumentRoot C:/wamp64/www/esqueleto/public
+    &lt;Directory  "C:/wamp64/www/esqueleto/public/"&gt;
         Options Indexes FollowSymLinks MultiViews
         AllowOverride All
         Require local
@@ -84,7 +84,7 @@ Add a new line with:</p>
 
 <p>Edit <code>DocumentRoot</code> and <code>Directory</code> accordingly (point to where you put the project inside the server)<br></p>
 
-<p>This means that, everytime <code>esqueleto.dev</code> is called in the browser, it will load the index file inside the <code>DocumentRoot</code> folder</p>
+<p>This means that, everytime <code>esqueleto.localhost</code> is called in the browser, it will load the index file inside the <code>DocumentRoot</code> folder</p>
 
 <p>From the command prompt, navigate to the root of the project and execute:</p>
 
@@ -175,6 +175,6 @@ Add a new line with:</p>
       </footer>
     </div>
     <script src="javascripts/scale.fix.js"></script>
-    
+
   </body>
 </html>
