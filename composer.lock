@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1b9c9e0b67ee07f2c149232f404d0275",
+    "content-hash": "2fd62b533d74304e3782abce9ddc924c",
     "packages": [
         {
             "name": "devgo/php-performance",
