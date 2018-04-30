@@ -16,7 +16,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 + Local server with PHP and MySQL
 + [NodeJs](https://nodejs.org/en/)
-+ [GruntJs](http://gruntjs.com/)
++ [Gulp](https://gulpjs.com/)
 + [Composer](https://getcomposer.org/)
 
 
@@ -27,7 +27,7 @@ These instructions will get you a copy of the project up and running on your loc
 Edit the file with admin priviledges  `C:\Windows\System32\drivers\etc\hosts`<br>
 Add a new line with:
 ```
-127.0.0.1  esqueleto.dev
+127.0.0.1  esqueleto.localhost
 ```
 
 On apache server, uncomment the line from the file `apache\apache2.4.18\conf\httpd.conf`
@@ -40,9 +40,9 @@ On the httpd-vhosts file add
 
 ```
 <VirtualHost *:80>
-    ServerName esqueleto.dev
-    DocumentRoot C:/wamp64/www/dev/esqueleto/public
-    <Directory  "C:/wamp64/www/dev/esqueleto/public/">
+    ServerName esqueleto.localhost
+    DocumentRoot C:/wamp64/www/esqueleto/public
+    <Directory  "C:/wamp64/www/esqueleto/public/">
         Options Indexes FollowSymLinks MultiViews
         AllowOverride All
         Require local
@@ -62,7 +62,7 @@ npm install
 composer update
 ```
 ```
-grunt
+gulp
 ```
 
 Import the db located at `data/db_esqueleto.zip`
