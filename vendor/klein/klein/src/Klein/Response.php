@@ -5,14 +5,17 @@
  * @author      Chris O'Hara <cohara87@gmail.com>
  * @author      Trevor Suarez (Rican7) (contributor and v2 refactorer)
  * @copyright   (c) Chris O'Hara
- * @link        https://github.com/chriso/klein.php
+ * @link        https://github.com/klein/klein.php
  * @license     MIT
  */
 
 namespace Klein;
 
+use Klein\Exceptions\ResponseAlreadySentException;
+use RuntimeException;
+
 /**
- * Response 
+ * Response
  */
 class Response extends AbstractResponse
 {
@@ -24,7 +27,7 @@ class Response extends AbstractResponse
     /**
      * Enable response chunking
      *
-     * @link https://github.com/chriso/klein.php/wiki/Response-Chunking
+     * @link https://github.com/klein/klein.php/wiki/Response-Chunking
      * @link http://bit.ly/hg3gHb
      * @param string $str   An optional string to send as a response "chunk"
      * @return Response
@@ -74,10 +77,15 @@ class Response extends AbstractResponse
      * @param string $path      The path of the file to send
      * @param string $filename  The file's name
      * @param string $mimetype  The MIME type of the file
+     * @throws RuntimeException Thrown if the file could not be read
      * @return Response
      */
     public function file($path, $filename = null, $mimetype = null)
     {
+        if ($this->sent) {
+            throw new ResponseAlreadySentException('Response has already been sent');
+        }
+
         $this->body('');
         $this->noCache();
 
@@ -89,12 +97,35 @@ class Response extends AbstractResponse
         }
 
         $this->header('Content-type', $mimetype);
-        $this->header('Content-length', filesize($path));
         $this->header('Content-Disposition', 'attachment; filename="'.$filename.'"');
 
-        $this->send();
+        // If the response is to be chunked, then the content length must not be sent
+        // see: https://www.w3.org/Protocols/rfc2616/rfc2616-sec4.html#sec4.4
+        if (false === $this->chunked) {
+            $this->header('Content-length', filesize($path));
+        }
 
-        readfile($path);
+        // Send our response data
+        $this->sendHeaders();
+
+        $bytes_read = readfile($path);
+
+        if (false === $bytes_read) {
+            throw new RuntimeException('The file could not be read');
+        }
+
+        $this->sendBody();
+
+        // Lock the response from further modification
+        $this->lock();
+
+        // Mark as sent
+        $this->sent = true;
+
+        // If there running FPM, tell the process manager to finish the server request/response handling
+        if (function_exists('fastcgi_finish_request')) {
+            fastcgi_finish_request();
+        }
 
         return $this;
     }

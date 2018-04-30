@@ -5,7 +5,7 @@
  * @author      Chris O'Hara <cohara87@gmail.com>
  * @author      Trevor Suarez (Rican7) (contributor and v2 refactorer)
  * @copyright   (c) Chris O'Hara
- * @link        https://github.com/chriso/klein.php
+ * @link        https://github.com/klein/klein.php
  * @license     MIT
  */
 
@@ -72,7 +72,7 @@ class DispatchHaltedException extends RuntimeException implements KleinException
     {
         return $this->number_of_skips;
     }
-    
+
     /**
      * Sets the number of matches to skip on a "next" skip
      *

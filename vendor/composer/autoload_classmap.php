@@ -6,8 +6,16 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'Devgo\\Captcha' => $vendorDir . '/devgo/classes/captcha.class.php',
-    'Devgo\\Database' => $vendorDir . '/devgo/classes/database.class.php',
-    'Devgo\\Email' => $vendorDir . '/devgo/classes/email.class.php',
-    'Devgo\\Utils' => $vendorDir . '/devgo/classes/utils.class.php',
+    'Devgo\\Performance' => $vendorDir . '/devgo/php-performance/Performance.class.php',
+    'Esqueleto\\Classes\\Database' => $baseDir . '/app/src/classes/Database.class.php',
+    'Esqueleto\\Classes\\StringsNumbers' => $baseDir . '/app/src/classes/StringsNumbers.class.php',
+    'Esqueleto\\Classes\\Translator' => $baseDir . '/app/src/classes/Translator.class.php',
+    'Esqueleto\\Classes\\Utils' => $baseDir . '/app/src/classes/Utils.class.php',
+    'Esqueleto\\Controller\\BaseController' => $baseDir . '/app/src/controller/BaseController.php',
+    'Esqueleto\\Controller\\DevController' => $baseDir . '/app/src/controller/DevController.php',
+    'Esqueleto\\Controller\\HomeController' => $baseDir . '/app/src/controller/HomeController.php',
+    'Esqueleto\\Controller\\PageController' => $baseDir . '/app/src/controller/PageController.php',
+    'Esqueleto\\Model\\BaseModel' => $baseDir . '/app/src/model/BaseModel.php',
+    'Esqueleto\\Model\\HomeModel' => $baseDir . '/app/src/model/HomeModel.php',
+    'Esqueleto\\Model\\PageModel' => $baseDir . '/app/src/model/PageModel.php',
 );

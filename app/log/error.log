@@ -1,0 +1,4 @@
+[2018-04-30 13:19:46] log.ERROR:  404 _ URL: http://esqueleto.localhost/page/1 _  _ From: 127.0.0.1 _  [] []
+[2018-04-30 13:20:14] log.ERROR:  404 _ URL: http://esqueleto.localhost/page/1 _  _ From: 127.0.0.1 _  [] []
+[2018-04-30 13:20:53] log.ERROR:  404 _ URL: http://esqueleto.localhost/page/1 _  _ From: 127.0.0.1 _  [] []
+[2018-04-30 13:22:40] log.ERROR:  404 _ URL: http://esqueleto.localhost/page/1 _  _ From: 127.0.0.1 _  [] []

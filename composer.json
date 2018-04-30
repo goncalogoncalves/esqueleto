@@ -7,22 +7,17 @@
     "authors": [
         {
             "name": "Gonçalo Gonçalves",
-            "email": "",
-            "homepage": ""
+            "email": "devgoncalo@gmail.com"
         }
     ],
-    "_comment": [
-        "devgo",
-				"qweqwe"
-    ],
+
     "require": {
         "klein/klein": "^2.1",
-        "monolog/monolog": "~1.12"
+        "monolog/monolog": "~1.23",
+        "devgo/php-performance": "^1.0",
+        "filp/whoops": "^2.1"
     },
     "autoload": {
-        "psr-0": {
-            "esqueleto": "app/src/"
-        },
-        "classmap": [ "vendor/devgo" ]
+        "classmap": [ "app/src/classes/", "app/src/controller/", "app/src/model/" ]
     }
 }

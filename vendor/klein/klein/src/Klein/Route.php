@@ -5,7 +5,7 @@
  * @author      Chris O'Hara <cohara87@gmail.com>
  * @author      Trevor Suarez (Rican7) (contributor and v2 refactorer)
  * @copyright   (c) Chris O'Hara
- * @link        https://github.com/chriso/klein.php
+ * @link        https://github.com/klein/klein.php
  * @license     MIT
  */
 
@@ -110,7 +110,7 @@ class Route
     {
         return $this->callback;
     }
-    
+
     /**
      * Set the callback
      *
@@ -138,7 +138,7 @@ class Route
     {
         return $this->path;
     }
-    
+
     /**
      * Set the path
      *
@@ -161,7 +161,7 @@ class Route
     {
         return $this->method;
     }
-    
+
     /**
      * Set the method
      *
@@ -190,7 +190,7 @@ class Route
     {
         return $this->count_match;
     }
-    
+
     /**
      * Set the count_match
      *
@@ -213,7 +213,7 @@ class Route
     {
         return $this->name;
     }
-    
+
     /**
      * Set the name
      *

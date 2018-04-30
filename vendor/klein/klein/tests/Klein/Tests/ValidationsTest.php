@@ -5,7 +5,7 @@
  * @author      Chris O'Hara <cohara87@gmail.com>
  * @author      Trevor Suarez (Rican7) (contributor and v2 refactorer)
  * @copyright   (c) Chris O'Hara
- * @link        https://github.com/chriso/klein.php
+ * @link        https://github.com/klein/klein.php
  * @license     MIT
  */
 
@@ -19,7 +19,7 @@ use Klein\Tests\Mocks\MockRequestFactory;
 use Klein\Validator;
 
 /**
- * ValidationsTest 
+ * ValidationsTest
  */
 class ValidationsTest extends AbstractKleinTest
 {
@@ -805,10 +805,7 @@ class ValidationsTest extends AbstractKleinTest
 
                 foreach ($args as $arg) {
                     if (null !== $previous) {
-                        if ((bool) $arg != (bool) $previous) {
-                            echo 'nope';
-                            var_dump($arg, $previous);
-                            var_dump((bool) $arg, (bool) $previous);
+                        if ((bool) $arg !== (bool) $previous) {
                             return false;
                         }
                     } else {

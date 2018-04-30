@@ -6,6 +6,4 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'esqueleto' => array($baseDir . '/app/src'),
-    'Psr\\Log\\' => array($vendorDir . '/psr/log'),
 );

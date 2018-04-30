@@ -5,7 +5,7 @@
  * @author      Chris O'Hara <cohara87@gmail.com>
  * @author      Trevor Suarez (Rican7) (contributor and v2 refactorer)
  * @copyright   (c) Chris O'Hara
- * @link        https://github.com/chriso/klein.php
+ * @link        https://github.com/klein/klein.php
  * @license     MIT
  */
 
@@ -349,7 +349,7 @@ class ServiceProviderTest extends AbstractKleinTest
             'title' => 'about',
             'verb' => 'woot',
         );
- 
+
         $this->klein_app->respond(
             function ($request, $response, $service) use ($test_data) {
                 // Set some data manually
@@ -386,7 +386,7 @@ class ServiceProviderTest extends AbstractKleinTest
 
         $response = new Response();
         $response->chunk();
- 
+
         $this->klein_app->respond(
             function ($request, $response, $service) use ($test_data) {
                 // Set some data manually
@@ -420,7 +420,7 @@ class ServiceProviderTest extends AbstractKleinTest
             'title' => 'about',
             'verb' => 'woot',
         );
- 
+
         $this->klein_app->respond(
             function ($request, $response, $service) use ($test_data) {
                 // Set our layout

@@ -7,6 +7,14 @@ namespace Composer\Autoload;
 class ComposerStaticInitaf2718f6f59a7af48f7615727e4e423f
 {
     public static $prefixLengthsPsr4 = array (
+        'W' => 
+        array (
+            'Whoops\\' => 7,
+        ),
+        'P' => 
+        array (
+            'Psr\\Log\\' => 8,
+        ),
         'M' => 
         array (
             'Monolog\\' => 8,
@@ -18,6 +26,14 @@ class ComposerStaticInitaf2718f6f59a7af48f7615727e4e423f
     );
 
     public static $prefixDirsPsr4 = array (
+        'Whoops\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/filp/whoops/src/Whoops',
+        ),
+        'Psr\\Log\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/psr/log/Psr/Log',
+        ),
         'Monolog\\' => 
         array (
             0 => __DIR__ . '/..' . '/monolog/monolog/src/Monolog',
@@ -28,28 +44,19 @@ class ComposerStaticInitaf2718f6f59a7af48f7615727e4e423f
         ),
     );
 
-    public static $prefixesPsr0 = array (
-        'e' => 
-        array (
-            'esqueleto' => 
-            array (
-                0 => __DIR__ . '/../..' . '/app/src',
-            ),
-        ),
-        'P' => 
-        array (
-            'Psr\\Log\\' => 
-            array (
-                0 => __DIR__ . '/..' . '/psr/log',
-            ),
-        ),
-    );
-
     public static $classMap = array (
-        'Devgo\\Captcha' => __DIR__ . '/..' . '/devgo/classes/captcha.class.php',
-        'Devgo\\Database' => __DIR__ . '/..' . '/devgo/classes/database.class.php',
-        'Devgo\\Email' => __DIR__ . '/..' . '/devgo/classes/email.class.php',
-        'Devgo\\Utils' => __DIR__ . '/..' . '/devgo/classes/utils.class.php',
+        'Devgo\\Performance' => __DIR__ . '/..' . '/devgo/php-performance/Performance.class.php',
+        'Esqueleto\\Classes\\Database' => __DIR__ . '/../..' . '/app/src/classes/Database.class.php',
+        'Esqueleto\\Classes\\StringsNumbers' => __DIR__ . '/../..' . '/app/src/classes/StringsNumbers.class.php',
+        'Esqueleto\\Classes\\Translator' => __DIR__ . '/../..' . '/app/src/classes/Translator.class.php',
+        'Esqueleto\\Classes\\Utils' => __DIR__ . '/../..' . '/app/src/classes/Utils.class.php',
+        'Esqueleto\\Controller\\BaseController' => __DIR__ . '/../..' . '/app/src/controller/BaseController.php',
+        'Esqueleto\\Controller\\DevController' => __DIR__ . '/../..' . '/app/src/controller/DevController.php',
+        'Esqueleto\\Controller\\HomeController' => __DIR__ . '/../..' . '/app/src/controller/HomeController.php',
+        'Esqueleto\\Controller\\PageController' => __DIR__ . '/../..' . '/app/src/controller/PageController.php',
+        'Esqueleto\\Model\\BaseModel' => __DIR__ . '/../..' . '/app/src/model/BaseModel.php',
+        'Esqueleto\\Model\\HomeModel' => __DIR__ . '/../..' . '/app/src/model/HomeModel.php',
+        'Esqueleto\\Model\\PageModel' => __DIR__ . '/../..' . '/app/src/model/PageModel.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
@@ -57,7 +64,6 @@ class ComposerStaticInitaf2718f6f59a7af48f7615727e4e423f
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInitaf2718f6f59a7af48f7615727e4e423f::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInitaf2718f6f59a7af48f7615727e4e423f::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInitaf2718f6f59a7af48f7615727e4e423f::$prefixesPsr0;
             $loader->classMap = ComposerStaticInitaf2718f6f59a7af48f7615727e4e423f::$classMap;
 
         }, null, ClassLoader::class);

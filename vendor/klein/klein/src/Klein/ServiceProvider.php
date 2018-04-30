@@ -5,7 +5,7 @@
  * @author      Chris O'Hara <cohara87@gmail.com>
  * @author      Trevor Suarez (Rican7) (contributor and v2 refactorer)
  * @copyright   (c) Chris O'Hara
- * @link        https://github.com/chriso/klein.php
+ * @link        https://github.com/klein/klein.php
  * @license     MIT
  */
 
@@ -14,7 +14,7 @@ namespace Klein;
 use Klein\DataCollection\DataCollection;
 
 /**
- * ServiceProvider 
+ * ServiceProvider
  *
  * Service provider class for handling logic extending between
  * a request's data and a response's behavior

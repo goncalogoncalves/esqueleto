@@ -5,14 +5,14 @@
  * @author      Chris O'Hara <cohara87@gmail.com>
  * @author      Trevor Suarez (Rican7) (contributor and v2 refactorer)
  * @copyright   (c) Chris O'Hara
- * @link        https://github.com/chriso/klein.php
+ * @link        https://github.com/klein/klein.php
  * @license     MIT
  */
 
 namespace Klein;
 
 /**
- * HttpStatus 
+ * HttpStatus
  *
  * HTTP status code and message translator
  */
@@ -133,7 +133,7 @@ class HttpStatus
     /**
      * Set the HTTP status code
      *
-     * @param int $code 
+     * @param int $code
      * @return HttpStatus
      */
     public function setCode($code)
@@ -145,7 +145,7 @@ class HttpStatus
     /**
      * Set the HTTP status message
      *
-     * @param string $message 
+     * @param string $message
      * @return HttpStatus
      */
     public function setMessage($message)
@@ -156,7 +156,7 @@ class HttpStatus
 
     /**
      * Get a string representation of our HTTP status
-     * 
+     *
      * @return string
      */
     public function getFormattedString()
@@ -190,7 +190,7 @@ class HttpStatus
      * Returns null if no corresponding message was
      * found for the passed in code
      *
-     * @param int $int 
+     * @param int $int
      * @return string|null
      */
     public static function getMessageFromCode($int)
