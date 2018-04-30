@@ -1,5 +1,6 @@
 vendor/
 .phpintel/
+
 composer.lock
 composer.phar
 package-lock.json
