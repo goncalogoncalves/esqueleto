@@ -50,7 +50,7 @@ On the httpd-vhosts file add
 
 Edit `DocumentRoot` and `Directory` accordingly (point to where you put the project inside the server)<br>
 
-This means that, everytime `esqueleto.dev` is called in the browser, it will load the index file inside the `DocumentRoot` folder
+This means that, everytime `esqueleto.localhost` is called in the browser, it will load the index file inside the `DocumentRoot` folder
 
 From the command prompt, navigate to the root of the project and execute:
 ```
@@ -67,7 +67,7 @@ Import the db located at `data/db_esqueleto.zip`
 
 ## Usage
 
-+ Edit configs in `config/development.php`
++ Edit configs in `app/config/app.php`
 + Routes are defined in the db. You aldo need to update `public/index.php`
 + If you add a new controller, update the `public/index.php`
 
